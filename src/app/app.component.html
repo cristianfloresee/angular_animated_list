@@ -1,7 +1,29 @@
 <div class="container">
   <div class="jumbotron">
-      <h1>Animated List Reordering</h1>
-      <h3>This is an example using Angular 5 Framework</h3>
-    
+    <h1>Animated List Reordering</h1>
+    <h3>This is an example using Angular 5 Framework</h3>
+
+    <button (click)="shuffle()">Reorder</button>
+    <table *ngIf="items" class="table table-striped">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Votes</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody [transition-group]="'flip-list'">
+        <tr *ngFor="let item of items" transition-group-item>
+          <td>{{item}}</td>
+          <td>
+            <a class="btn btn-default" role="button" (click)="shuffle()">
+              <span class="glyphicon glyphicon-arrow-up"></span> Upvote!
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
   </div>
 </div>
