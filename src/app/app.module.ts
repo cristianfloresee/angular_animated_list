@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { TransitionGroupComponent, TransitionGroupItemDirective } from './transition-group/transition-group.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -11,10 +12,12 @@ import { TransitionGroupComponent, TransitionGroupItemDirective } from './transi
     AppComponent,
     TransitionGroupComponent,
     TransitionGroupComponent,
-    TransitionGroupItemDirective
+    TransitionGroupItemDirective,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

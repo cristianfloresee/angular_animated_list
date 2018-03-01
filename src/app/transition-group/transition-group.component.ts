@@ -15,7 +15,6 @@ export class TransitionGroupItemDirective {
   }
 }
 
-
 @Component({
   selector: '[transition-group]',
   template: '<ng-content></ng-content>'
